@@ -4,6 +4,12 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props)
+      this.state = {
+        
+      }
+  }
   render () {
     return (
       <div className="container">
