@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Main from './Main';
 
 export default class App extends React.Component {
@@ -15,7 +16,5 @@ export default class App extends React.Component {
 }
 
 App.propTypes = {
-  children: PropTypes.string.isRequired,
-  //L: jesli to nie string to prosze o poprawienie, nie wiem jaki jest zamysl
-  //W: to raczej 'object' bym powiedzial jak bedzie kilka tagów renderowanych w jednym 'duzym divie'
+  children: PropTypes.object.isRequired,
 };

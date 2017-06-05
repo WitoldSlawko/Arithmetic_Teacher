@@ -47,4 +47,4 @@ export default class Multiplication extends React.Component {
       </div>
     );
   }
-  }
+}

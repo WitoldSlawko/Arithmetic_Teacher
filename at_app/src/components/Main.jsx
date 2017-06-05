@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import NavBar from './NavBar';
 import Footer from './Footer';
@@ -24,5 +25,5 @@ export default class Main extends React.Component {
 }
 
 Main.propTypes = {
-  dataToRender: PropTypes.string.isRequired,
+  dataToRender: PropTypes.object.isRequired,
 };
