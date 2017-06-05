@@ -16,5 +16,6 @@ export default class App extends React.Component {
 
 App.propTypes = {
   children: PropTypes.string.isRequired,
-  //jesli to nie string to prosze o poprawienie, nie wiem jaki jest zamysl
+  //L: jesli to nie string to prosze o poprawienie, nie wiem jaki jest zamysl
+  //W: to raczej 'object' bym powiedzial jak bedzie kilka tagów renderowanych w jednym 'duzym divie'
 };
