@@ -1,27 +1,28 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Header from './Header';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-class Main extends React.Component {
+export default class Main extends React.Component {
   constructor(props) {
-    super(props)
-      this.state = {
-        
-      }
+    super(props);
+    this.state = {};
   }
-  render () {
+
+  render() {
     return (
       <div className="container">
         <Header />
         <NavBar />
         <main>
-            {this.props.dataToRender}   
+          {this.props.dataToRender}
         </main>
         <Footer />
       </div>
-    )
+    );
   }
 }
 
-export default Main;
+Main.propTypes = {
+  dataToRender: PropTypes.string.isRequired,
+};

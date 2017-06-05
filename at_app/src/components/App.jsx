@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Main from './Main';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -18,5 +18,3 @@ App.propTypes = {
   children: PropTypes.string.isRequired,
   //jesli to nie string to prosze o poprawienie, nie wiem jaki jest zamysl
 };
-
-export default App;

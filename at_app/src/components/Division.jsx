@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Starter() {
+export default function Division() {
   return (
     <div>
-      STARTER
+      DIVISION
     </div>
   );
 }
