@@ -1,5 +1,5 @@
 let _getCurrentYear = () => {
-    let date = new Date;
+    let date = new Date();
     return date.getFullYear();
 }
 
