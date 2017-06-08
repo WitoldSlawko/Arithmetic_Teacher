@@ -4,8 +4,5 @@
         "react",
         "jsx-a11y",
         "import"
-    ],
-    "rules": {
-    	"react/forbid-prop-types": [{ "forbid": ["any"] }]
-    } 
+    ]
 }
