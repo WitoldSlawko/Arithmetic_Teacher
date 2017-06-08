@@ -14,7 +14,8 @@
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
-    "react-scripts": "1.0.
+    "react-scripts": "1.0"
+  },
   "scripts": {
     "start": "react-scripts-with-sass start",
     "build": "react-scripts-with-sass build",
