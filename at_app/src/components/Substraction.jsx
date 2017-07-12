@@ -71,7 +71,7 @@ export default class Substraction extends React.Component {
 
     const inputs = arr2.map(item =>
       <div key={item}>
-        <span>-</span>
+        <p>-</p>
         <InputNumber />
       </div>
     );

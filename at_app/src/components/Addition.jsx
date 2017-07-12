@@ -1,7 +1,10 @@
 import React from 'react';
 import InputNumber from './InputNumber.jsx';
+import PropTypes from 'prop-types';
+import { mapStateToProps, dispatchToProps } from '../dispatch/dispatch.jsx'
+import { connect } from 'react-redux';
 
-export default class Addition extends React.Component {
+class Addition extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -12,6 +15,11 @@ export default class Addition extends React.Component {
     };
     this.changeInputs = this.changeInputs.bind(this);
     this.handleEvaluation = this.handleEvaluation.bind(this);
+  }
+
+  static PropTypes = {
+    number: PropTypes.Number,
+    changeNumber: PropTypes.func
   }
 
   changeInputs(event) {
@@ -73,13 +81,14 @@ export default class Addition extends React.Component {
 
     const inputs = arr2.map(item =>
       <div key={item}>
-        <span>+</span>
+        <p>+</p>
         <InputNumber />
       </div>
     );
 
     return (
-      <div className="addition">
+      <div className="addition pack">
+        <div className="number_picker">
         Choose how many numbers should be added:
         <select onChange={this.changeInputs} value={this.state.input_numbers}>
           {options}
@@ -96,7 +105,15 @@ export default class Addition extends React.Component {
         </div>
         <button onClick={this.handleEvaluation}>Check!</button>
         <p>{ this.state.evaluation }</p>
+        </div>
+        <div className="written_calculations">
+
+        </div>
       </div>
     );
   }
 }
+
+Addition = connect(mapStateToProps, dispatchToProps)(Addition);
+
+export default Addition;

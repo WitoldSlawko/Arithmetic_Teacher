@@ -13,9 +13,22 @@
   width: 100%;
   margin: 0 auto;
   height: 100vh;
+
   > * {
     border: 1px dotted black;
   }
+}
+
+.head, .foot {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  width: 200px;
+  text-align: center;
 }
 
 ul {
@@ -26,13 +39,16 @@ ul {
 li {
   text-decoration: none;
 }
-
+/*
 header, footer {
   height: 10vh;
 }
-
+*/
 nav {
   height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -43,4 +59,18 @@ main {
   width: 20%;
   display: flex;
   flex-direction: column;
+}
+
+.pack {
+  display: flex;
+  height: inherit;
+}
+
+.number_picker, .written_calculations {
+  border: 1px solid black;
+  height: inherit;
+}
+
+.written_calculations {
+  width: 100%;
 }
