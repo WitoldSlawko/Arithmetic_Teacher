@@ -32,6 +32,7 @@ class Addition extends React.Component {
     this.setState({
       first_value: event.target.value
     })
+    console.log(this.state.first_value);
   }
   
   handleEvaluation = () => {
@@ -66,6 +67,7 @@ class Addition extends React.Component {
   render() {
     const arr = [];
     const arr2 = [];
+    const boxes_1 = []
 
     for (let i = 2; i <= this.state.maxNumberOfInputs; i += 1) {
       arr.push(i);
@@ -85,6 +87,16 @@ class Addition extends React.Component {
         <InputNumber />
       </div>
     );
+
+    for (let i = 0; i < this.state.first_value.length; i+=1) {
+      boxes_1.push(this.state.first_value[i]);
+    }
+
+    const boxes_show = boxes_1.map((digit, ind) =>
+      <p className = "focuser">
+        <p key={ind} className="digit">{digit}</p>
+      </p>
+    )
 
     return (
       <div className="addition pack">
@@ -106,8 +118,8 @@ class Addition extends React.Component {
         <button onClick={this.handleEvaluation}>Check!</button>
         <p>{ this.state.evaluation }</p>
         </div>
-        <div className="written_calculations">
-
+        <div className="written_calculations digits_line">
+          { boxes_show }
         </div>
       </div>
     );
