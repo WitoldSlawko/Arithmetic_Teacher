@@ -5,7 +5,7 @@ pipeline{
     stages{
         stage("echo"){
             steps{
-                echo "echoing"
+                echo "check from triggering"
             }
         }
     }
