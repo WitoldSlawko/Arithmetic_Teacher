@@ -1,7 +1,7 @@
 pipeline{
     agent any
-    tools {}
-    options {}
+    // tools {}
+    // options {}
     stages{
         stage("echo"){
             steps{
