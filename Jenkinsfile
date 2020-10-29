@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    trigger {
+    triggers {
         cron ('H/3 * * * *')
     }
     // tools {}
