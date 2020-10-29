@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    trigger {
+        cron ('H/3 * * * *'))
+    }
     // tools {}
     // options {}
     stages{
